@@ -1,0 +1,21 @@
+{
+  "name": "memecoin-launch-guard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "J7/Pump.fun trend scorer with dry-run deployment and explicit approval gating.",
+  "scripts": {
+    "setup": "node src/setup.js",
+    "start": "node src/bootstrap.js",
+    "demo": "node src/demo.js",
+    "costs": "node src/costs.js",
+    "test": "node --test",
+    "watch-j7": "node src/standalone-worker.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "playwright-core": "^1.63.0"
+  }
+}

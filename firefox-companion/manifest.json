@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Launch Guard J7 Companion",
+  "version": "1.0.0",
+  "description": "Reads visible public J7 feed cards and forwards them to Launch Guard on this Mac.",
+  "permissions": [
+    "https://j7tracker.io/*",
+    "https://pump.fun/*",
+    "http://127.0.0.1:8787/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://j7tracker.io/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://pump.fun/create*"],
+      "js": ["pump-content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
